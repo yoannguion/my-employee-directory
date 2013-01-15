@@ -31,7 +31,19 @@ registerEvents: function() {
         });
     }
 
+		$('body').on('deviceready', 'a', function(event) {
+		   this.showAlert('device ready','Info');
+           this.onDeviceReady();
+        });
+
+		$('body').on('menubutton', 'a', function(event) {
+		   this.showAlert('menubutton','Info');
+           this.onMenuKeyDown();
+        });
+
  document.addEventListener("deviceready", this.onDeviceReady, false);
+ document.addEventListener("menubutton", this.onMenuKeyDown, false);
+
 },
 
 
