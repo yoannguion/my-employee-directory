@@ -31,7 +31,7 @@ registerEvents: function() {
         });
     }
 
- document.addEventListener("deviceready", onDeviceReady, false);
+ document.addEventListener("deviceready", this.onDeviceReady, false);
 },
 
 
