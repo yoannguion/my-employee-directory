@@ -31,7 +31,7 @@ registerEvents: function() {
         });
     }
 
-	document.addEventListener("menuKeyDown", function(){
+	document.addEventListener("menubutton", function(){
 		this.menu();
       }, false); 
 },
