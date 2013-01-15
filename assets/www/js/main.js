@@ -12,27 +12,15 @@ registerEvents: function() {
     var self = this;
     
 	 $(window).on('hashchange', $.proxy(this.route, this));
-       // Check of browser supports touch events...
-    if (document.documentElement.hasOwnProperty('ontouchstart')) {
-        // ... if yes: register touch event listener to change the "selected" state of the item
-        $('body').on('touchstart', 'a', function(event) {
-            $(event.target).addClass('tappable-active');
-        });
-        $('body').on('touchend', 'a', function(event) {
-            $(event.target).removeClass('tappable-active');
-        });
-    } else {
-        // ... if not: register mouse events instead
-        $('body').on('mousedown', 'a', function(event) {
-            $(event.target).addClass('tappable-active');
-        });
-        $('body').on('mouseup', 'a', function(event) {
-            $(event.target).removeClass('tappable-active');
-        });
-    }
+     // ... if not: register mouse events instead
+     $('body').on('mousedown', 'a', function(event) {
+        $(event.target).addClass('tappable-active');
+     });
+     $('body').on('mouseup', 'a', function(event) {
+        $(event.target).removeClass('tappable-active');
+     });
 },
 slidePage: function(page) {
- 
     var currentPageDest,
         self = this;
  
@@ -41,7 +29,7 @@ slidePage: function(page) {
         $(page.el).attr('class', 'page stage-center');
         $('body').append(page.el);
         this.currentPage = page;
-        return;
+		return;
     }
  
     // Cleaning up: remove old pages that were moved out of the viewport
@@ -93,8 +81,8 @@ route: function() {
 		this.detailsURL = /^#employees\/(\d{1,})/;
     	this.registerEvents();
         this.store = new Store(function() {
-		    self.showAlert('Store Initialized', 'Info');
-			$('body').html(new HomeView(self.store).render().el);
+		    //self.showAlert('Store Initialized', 'Info');
+			self.route();
         });
     }
 
