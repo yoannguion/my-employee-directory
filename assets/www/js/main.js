@@ -31,14 +31,26 @@ registerEvents: function() {
         });
     }
 
-	document.addEventListener("menubutton", function(){
-		this.menu();
-      }, false); 
+ document.addEventListener("deviceready", onDeviceReady, false);
 },
 
-menu: function() {
-	this.showAlert('menu','Info');
-},
+
+// PhoneGap is loaded and it is now safe to make calls PhoneGap methods
+    //
+    onDeviceReady: function() {
+		this.showAlert('device ready','Info');
+        // Register the event listener
+        document.addEventListener("menubutton", this.onMenuKeyDown, false);
+    },
+
+    // Handle the menu button
+    //
+    onMenuKeyDown: function() {
+		this.showAlert('menu','Info');
+    },
+
+
+
 slidePage: function(page) {
     var currentPageDest,
         self = this;
