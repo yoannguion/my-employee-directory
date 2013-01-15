@@ -54,6 +54,63 @@ body {
     left: 4;
 }
 
+.header-back-button button{
+}
+
+.header-button button {
+    pointer-events: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    min-width: 50px;
+    height: 30px;
+    font-size: 12px;
+    text-align: center;
+    padding: 0 4px;
+    margin: 0;
+    text-decoration: none;
+    color: transparent;
+    background: none;
+    border: none;
+}
+
+.icon-search {
+    background: transparent url(images/default/ic_action_search.png);
+}
+
+.header-button.tappable-active button .icon-search {
+    background: transparent url(images/default/active/ic_action_search.png);
+}
+
+.icon-back {
+    background: transparent url(images/default/ic_action_goleft.png);
+}
+
+.header-button.tappable-active button .icon-back {
+    background: transparent url(images/default/active/ic_action_goleft.png);
+}
+
+.icon-sync {
+    background: transparent url(images/default/ic_action_download.png);
+}
+
+
+/*.header-back-button button {*/
+    /*background: url('images/back-button-android.png') no-repeat;*/
+/*}*/
+
+/*.header-back-button.tappable-active button {*/
+    /*background: url('images/back-button-android-active.png') no-repeat;*/
+/*}*/
+
+.header-button-left{
+left: 0;
+}
+
+.header-button-right{
+right: 0;
+}
+
 .search-bar {
     background: #ccc;
     height: 32px;
@@ -228,4 +285,102 @@ h2 {
     -moz-transition-duration: .375s;
     -webkit-transition-duration: .375s;
     -o-transition-duration: .375s;
+}
+
+
+/*-----------------------------------------------------------------------*/
+
+.normal-button{
+padding: 7px 5px;
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+line-height: 1em;
+}
+
+.normal-button button{
+pointer-events: none;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+min-width: 50px;
+height: 40px;
+line-height: 25px;
+font-weight: bold;
+font-size: 14px;
+text-align: center;
+color: #fff;
+text-shadow: 0 -1px rgba(0,0,0,.6);
+padding: 0 4px;
+margin: 0;
+text-decoration: none;
+border-width: 2px 5px;
+/*-webkit-border-image: url(images/button.png) 4 10 4 10;*/
+/*-moz-border-image: url(images/button.png) 4 10 4 10;*/
+/*-ms-border-image: url(images/button.png) 4 10 4 10;*/
+/*-o-border-image: url(images/button.png) 4 10 4 10;*/
+/*background: transparent url(images/button-active.png) no-repeat;*/
+-webkit-background-size: 0 0;
+-moz-background-size: 0 0;
+-ms-background-size: 0 0;
+-o-background-size: 0 0;
+background-size: 0 0;
+}
+
+.normal-button.tappable-active button{
+/*-webkit-border-image: url(images/button-active.png) 4 10 4 10;*/
+/*-moz-border-image: url(images/button-active.png) 4 10 4 10;*/
+/*-ms-border-image: url(images/button-active.png) 4 10 4 10;*/
+/*-o-border-image: url(images/button-active.png) 4 10 4 10;*/
+}
+
+.action-icon {
+    position: absolute;
+    right: 10px;
+width: 32px;
+height: 32px;
+}
+
+.header-icon {
+width: 32px;
+height: 32px;
+}
+
+.icon-call {
+    background: transparent url(images/default/ic_action_phone_outgoing.png);
+}
+
+.icon-sms {
+    background: transparent url(images/default/ic_action_dialog.png);
+}
+
+.icon-mail {
+    background: transparent url(images/default/ic_action_mail.png);
+}
+
+.icon-manager {
+    background: transparent url(images/default/ic_action_user.png);
+}
+
+.icon-reports {
+    background: transparent url(images/default/ic_action_users.png);
+}
+
+.icon-contact {
+    background: transparent url(images/default/ic_action_add.png);
+}
+
+input[type="search"] {
+    width:100%;
+border: none;
+border-radius: 4px;
+padding: 4px 0px 2px 6px;
+margin-top: 0px;
+font-size: 16px;
+box-shadow: inset 0 2px 2px rgba(0,0,0,.5), 0 1px #fff;
+background: #eee;
+    -webkit-appearance:none;
+}
+
+input[type="search"]:focus {
+outline: none;
+box-shadow: inset 0 4px 8px rgba(0,0,0,.5), 0 1px #fff;
 }

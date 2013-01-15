@@ -2,12 +2,16 @@
 <head>
 <!-- <script src="css/source-sans-pro.js"></script> -->
 <link href="css/styles.css" rel="stylesheet">
+<!-- <script src="js/styleswitch.js"></script> -->
 </head>
 <body>
 
 
 <script id="home-tpl" type="text/x-handlebars-template">
-    <div class='header'><h1>Home</h1></div>
+    <div class='header'><h1>CPSure Directory</h1>
+    <a href="#sync" class="header-button header-button-icon header-button-right sync">
+        <button><div class="header-icon icon-sync"></div></button>
+    </a></div>
     <div class='search-bar'><input class='search-key' type="search"/></div>
     <div class="scroll"><ul class='employee-list'></ul></div>
 </script>
@@ -19,9 +23,16 @@
 </script>
 
 <script id="employee-tpl" type="text/x-handlebars-template">
-    <div class='header'><a href='#' class="button header-button header-button-left">Back</a><h1>Details</h1></div>
+    <div class='header'><a href="#" id="backBtn" class="header-button header-back-button header-button-left">
+        <button><div class="header-icon icon-back">Back</div></button>
+    </a>
+
+    <h1>D&eacute;tail</h1>
+    <a href="#" class="header-button header-button-icon header-button-right search">
+        <button><div class="header-icon icon-search"></div></button>
+    </a></div>
     <div class='details'>
-        <img class='employee-image' src='img/{{firstName}}_{{lastName}}.jpg' />
+        <img class='employee-image' src='pics/{{firstName}}_{{lastName}}.jpg' />
         <h1>{{firstName}} {{lastName}}</h1>
         <h2>{{title}}</h2>
         <span class="location"></span>

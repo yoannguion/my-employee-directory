@@ -30,6 +30,14 @@ registerEvents: function() {
             $(event.target).removeClass('tappable-active');
         });
     }
+
+	document.addEventListener("menuKeyDown", function(){
+		this.menu();
+      }, false); 
+},
+
+menu: function() {
+	this.showAlert('menu','Info');
 },
 slidePage: function(page) {
     var currentPageDest,
