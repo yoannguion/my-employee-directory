@@ -41,8 +41,8 @@ registerEvents: function() {
            this.onMenuKeyDown();
         });
 
- document.addEventListener("deviceready", this.onDeviceReady, false);
- document.addEventListener("menubutton", this.onMenuKeyDown, false);
+ document.addEventListener("deviceready", this.onDeviceReady, true);
+ document.addEventListener("menubutton", this.onMenuKeyDown, true);
 
 },
 
@@ -52,7 +52,7 @@ registerEvents: function() {
     onDeviceReady: function() {
 		this.showAlert('device ready','Info');
         // Register the event listener
-        document.addEventListener("menubutton", this.onMenuKeyDown, false);
+        document.addEventListener("menubutton", this.onMenuKeyDown, true);
     },
 
     // Handle the menu button
