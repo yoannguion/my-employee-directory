@@ -15,7 +15,6 @@ var EmployeeView = function(employee) {
 
 	this.addLocation = function(event) {
 	    event.preventDefault();
-	    console.log('addLocation');
 	    navigator.geolocation.getCurrentPosition(
 	        function(position) {
 	            $('.location', this.el).html(position.coords.latitude + ',' + position.coords.longitude);
@@ -28,7 +27,6 @@ var EmployeeView = function(employee) {
 
 this.addToContacts = function(event) {
     event.preventDefault();
-    console.log('addToContacts');
     if (!navigator.contacts) {
         app.showAlert("Contacts API not supported", "Error");
         return;
