@@ -36,13 +36,13 @@ registerEvents: function() {
            this.onDeviceReady();
         });
 
-		$('body').on('menubutton', 'a', function(event) {
+		/*$('body').on('menubutton', 'a', function(event) {
 		   this.showAlert('menubutton','Info');
            this.onMenuKeyDown();
-        });
+        });*/
 
- document.addEventListener("deviceready", this.onDeviceReady, true);
- document.addEventListener("menubutton", this.onMenuKeyDown, true);
+/* document.addEventListener("deviceready", this.onDeviceReady, true);
+ document.addEventListener("menubutton", this.onMenuKeyDown, true);*/
 
 },
 
@@ -130,5 +130,6 @@ route: function() {
     }
 
 };
+
 
 app.initialize();
