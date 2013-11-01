@@ -1,12 +1,43 @@
+<!DOCTYPE html>
 <html>
-<head>
-<!-- <script src="css/source-sans-pro.js"></script> -->
-<link href="css/styles.css" rel="stylesheet">
-<!-- <script src="js/styleswitch.js"></script> -->
-</head>
-<body>
+  <head>
+    <title>Device Properties Example</title>
 
-<!--
+    <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for PhoneGap to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // PhoneGap is ready
+    //
+    function onDeviceReady() {
+        var element = document.getElementById('deviceProperties');
+
+        element.innerHTML = 'Device Name: '     + device.name     + '<br />' + 
+                            'Device PhoneGap: ' + device.phonegap + '<br />' + 
+                            'Device Platform: ' + device.platform + '<br />' + 
+                            'Device UUID: '     + device.uuid     + '<br />' + 
+                            'Device Version: '  + device.version  + '<br />';
+    }
+
+    </script>
+  </head>
+  <body>
+    <p id="deviceProperties">Loading device properties...</p>
+  </body>
+</html>
+<!-- 
+<html>
+<head> -->
+<!-- <script src="css/source-sans-pro.js"></script> -->
+<!-- <link href="css/styles.css" rel="stylesheet"> -->
+<!-- <script src="js/styleswitch.js"></script> -->
+<!-- </head>
+<body> 
+
+ --><!--
 <script id="home-tpl" type="text/x-handlebars-template">
     <div class='header'><h1>CPSure Directory</h1>
     <a href="#sync" class="header-button header-button-icon header-button-right sync">
@@ -57,10 +88,11 @@
 <script src="js/EmployeeView.js"></script>
 <script src="js/main.js"></script>
 -->
-<script type="text/javascript" charset="utf-8">
+<!-- <script type="text/javascript" charset="utf-8">
 //document.location='https://websso.enovacom.fr/cpsuredirectory/index.html';
-document.location='http://192.168.5.94/CPSureDirectory/public/structure/home';
+document.location='https://www.yoguios.fr/CPSureDirectory/public/structure/home';
 </script>
 
 </body>
 </html>
+-->
